@@ -1,14 +1,6 @@
-# Tayyaba Imtiaz Portfolio
+# Yahya fares Portfolio
 
-A modern, responsive portfolio website built with React and Tailwind CSS.
-
-## Features
-
-- Responsive design that works on all devices
-- Dark/light mode support
-- Animated sections for a modern feel
-- Contact form with validation
-- Sections for showcasing skills, education, and projects
+A modern, responsive portfolio website built with React and JavaScript/HTML/CSS.
 
 ## Getting Started
 
@@ -21,8 +13,8 @@ A modern, responsive portfolio website built with React and Tailwind CSS.
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/portfolio.git
-   cd portfolio
+   git clone https://github.com/yares28/MyPortfolio.git
+   cd Myportfolio
    ```
 
 2. Install dependencies:
@@ -54,13 +46,6 @@ Edit the component files in the `src/components` directory to update your person
 - `projects-section.tsx`: Update your projects
 - `contact-section.tsx`: Update your contact information
 
-### Styling
-
-The portfolio uses Tailwind CSS for styling. You can customize the colors, fonts, and other design elements by editing:
-
-- `tailwind.config.js`: Update the theme configuration
-- `src/index.css`: Update global styles and animations
-
 ## Deployment
 
 Build the production version of the app:
@@ -76,15 +61,9 @@ The build artifacts will be stored in the `build/` directory, which can be deplo
 ## Technologies Used
 
 - React
-- Tailwind CSS
 - CSS Animations
 - Responsive Design
-
-## License
-
-This project is open source and available under the [MIT License](LICENSE).
 
 ## Acknowledgments
 
 - Design inspiration from various portfolio websites
-- Icons from [Heroicons](https://heroicons.com/)
