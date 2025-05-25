@@ -25,7 +25,7 @@ export function HeroSection() {
               Contact Me
             </a>
             <a
-              href="/resume.pdf"
+              href="/pdf/Yahya_Fares_CV.pdf"
               download="Yahya_Fares_CV.pdf"
               className="px-6 py-3 bg-secondary text-black font-medium rounded-md hover:bg-secondary/80 transition-colors"
             >
@@ -35,7 +35,7 @@ export function HeroSection() {
         </div>
         <div className="md:w-1/2 mt-12 md:mt-0 flex justify-center animate-in" style={{ animationDelay: "0.2s" }}>
           <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-primary">
-            {/* Replace with your profile image */}
+            {/* Replace with profile image */}
             <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-primary/40 flex items-center justify-center text-4xl font-bold text-primary-foreground">
               YF
             </div>

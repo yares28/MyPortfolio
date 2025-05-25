@@ -2,11 +2,11 @@
 
 import React from "react"
 
-// Skill data with categories and items
+
 const skillsData = [
   {
     category: "Programming Languages",
-    skills: ["JavaScript", "Python", "Java", "C/C++", "HTML/CSS", "SQL", "Java", "React", "TailwindCSS"]
+    skills: ["JavaScript", "Python", "Java", "C/C++", "HTML/CSS", "SQL", "Java", "React", "TailwindCSS", "PostgreSQL", "Springboot(Java)", "Node.js"]
   },
   {
     category: "Languages",
@@ -14,7 +14,7 @@ const skillsData = [
   },
   {
     category: "Tools & Technologies",
-    skills: ["Git", "GitHub", "VS Code", "Docker", "AWS", "Linux", ""]
+    skills: ["Git", "GitHub", "VS Code", "Docker", "AWS"]
   },
   {
     category: "Soft Skills",

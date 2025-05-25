@@ -25,7 +25,7 @@ export function Navbar() {
       isScrolled ? "bg-background/90 backdrop-blur-md shadow-sm" : "bg-transparent"
     }`}>
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-        <a href="#" className="text-xl font-bold text-primary">Tayyaba Imtiaz</a>
+        <a href="#" className="text-xl font-bold text-primary">Yahya Fares</a>
         <div className="hidden md:flex space-x-6 items-center">
           <a href="#about" className="hover:text-primary transition-colors">About</a>
           <a href="#skills" className="hover:text-primary transition-colors">Skills</a>

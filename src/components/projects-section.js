@@ -8,8 +8,8 @@ const projectsData = [
     title: "Pathfinder Visualizer:",
     description: "A dynamic pathfinding visualization tool built with React, HTML, and JavaScript, bringing algorithms like Dijkstra, A (Astar), DFS, and BFS to life. This interactive project helps users understand how different pathfinding techniques work by visualizing their step-by-step process in real time.",
     technologies: ["React", "JavaScript", "HTML", "CSS"],
-    image: "/images/project1img.png", // Replace with actual image path
-    video: "/videos/project1.mp4", // Add video path
+    image: "/images/project1img.png", 
+    video: "/videos/project1.mp4", 
     link: "https://pathfinder-visualizer-iota.vercel.app/",
     github: "https://github.com/yares28/Pathfinder-Visualizer"
   },
@@ -17,8 +17,8 @@ const projectsData = [
     title: "ScrapedIn",
     description: "A web platform designed to help users track and manage their job applications on LinkedIn. It lets you register each application, organize them into your own categories, and monitor the progress of each submission. While it might not be the most advanced scraper out there, it offers a straightforward and accessible solution that gets the job done without overcomplicating the process.",
     technologies: ["JavaScript", "Python", "HTML", "CSS"],
-    image: "/images/project2img.png", // Replace with actual image path
-    video: "/videos/project2.mp4", // Add video path
+    image: "/images/project2img.png", 
+    video: "/videos/project2.mp4", 
     link: "https://spraped-in.vercel.app/",
     github: "https://github.com/yares28/Linkedin-Tracker"
   },
@@ -26,8 +26,8 @@ const projectsData = [
     title: "To be announced...",
     description: "To be described...",
     technologies: ["To be built..."],
-    image: "/images/project3img.png", // Replace with actual image path
-    video: "/videos/project3.mp4", // Add video path
+    image: "/images/project3img.png", 
+    video: "/videos/project3.mp4",
     link: "#",
     github: "https://github.com/yares28"
   },
@@ -35,19 +35,19 @@ const projectsData = [
     title: "To be announced...",
     description: "To be described...",
     technologies: ["To be built..."],
-    image: "/images/project3img.png", // Replace with actual image path
-    video: "/videos/project3.mp4", // Add video path
+    image: "/images/project3img.png",   
+    video: "/videos/project3.mp4", 
     link: "#",
     github: "https://github.com/yares28"
   }
 ]
 
-// Project Card Component
+
 function ProjectCard({ project, index, isHovered, onMouseEnter, onMouseLeave }) {
   const videoRef = useRef(null);
   const [videoError, setVideoError] = useState(false);
   
-  // Handle video playback on hover
+
   useEffect(() => {
     if (isHovered && videoRef.current && !videoError && project.video) {
       try {
@@ -65,13 +65,13 @@ function ProjectCard({ project, index, isHovered, onMouseEnter, onMouseLeave }) 
     }
   }, [isHovered, project.video, videoError]);
   
-  // Handle video errors
+
   const handleVideoError = () => {
     console.log("Failed to load video:", project.video);
     setVideoError(true);
   };
   
-  // Handle video end - don't loop
+  
   const handleVideoEnded = () => {
     if (videoRef.current) {
       videoRef.current.pause();
@@ -105,7 +105,7 @@ function ProjectCard({ project, index, isHovered, onMouseEnter, onMouseLeave }) 
           />
         )}
         
-        {/* Project video (shown on hover) */}
+        
         {project.video && !videoError && (
           <video
             ref={videoRef}
@@ -122,7 +122,7 @@ function ProjectCard({ project, index, isHovered, onMouseEnter, onMouseLeave }) 
           />
         )}
         
-        {/* Fallback if no image */}
+        
         {!project.image && (
           <div className="text-4xl font-bold text-primary/30 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
             {project.title.substring(0, 2)}
@@ -172,7 +172,6 @@ function ProjectCard({ project, index, isHovered, onMouseEnter, onMouseLeave }) 
 }
 
 export function ProjectsSection() {
-  // State to track which project card is being hovered
   const [hoveredIndex, setHoveredIndex] = useState(null);
 
   return (

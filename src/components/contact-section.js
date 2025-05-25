@@ -25,13 +25,13 @@ export function ContactSection() {
     setIsSubmitting(true)
     setSubmitError("")
     
-    // Simulate form submission
+
     setTimeout(() => {
       setIsSubmitting(false)
       setSubmitSuccess(true)
       setFormData({ name: "", email: "", message: "" })
       
-      // Reset success message after 5 seconds
+
       setTimeout(() => {
         setSubmitSuccess(false)
       }, 5000)
