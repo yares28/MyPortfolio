@@ -1,10 +1,12 @@
 "use client"
 
 import React, { useState, useEffect } from "react"
+import { useTheme } from "next-themes"
 import { ThemeToggle } from "./theme-toggle"
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false)
+  const { resolvedTheme } = useTheme()
 
   // Handle scroll event to change navbar appearance
   useEffect(() => {
@@ -21,11 +23,17 @@ export function Navbar() {
   }, [])
 
   return (
-    <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${
+    <nav className={`fixed top-0 w-full z-50 transition-all duration-300 h-16 ${
       isScrolled ? "bg-background/90 backdrop-blur-md shadow-sm" : "bg-transparent"
     }`}>
-      <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-        <a href="#" className="text-xl font-bold text-primary">Yahya Fares</a>
+      <div className="container mx-auto px-4 h-full flex justify-between items-center">
+        <a href="#" className="flex items-center h-full">
+          <img 
+            src={resolvedTheme === "dark" ? "/images/logoYdark.png" : "/images/logoYWhite.png"} 
+            alt="Yahya Fares Logo" 
+            className="h-20 w-auto"
+          />
+        </a>
         <div className="hidden md:flex space-x-6 items-center">
           <a href="#about" className="hover:text-primary transition-colors">About</a>
           <a href="#skills" className="hover:text-primary transition-colors">Skills</a>
