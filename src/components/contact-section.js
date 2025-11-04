@@ -1,6 +1,7 @@
 "use client"
 
 import React, { useState } from "react"
+import emailjs from "@emailjs/browser"
 
 export function ContactSection() {
   const [formData, setFormData] = useState({
@@ -12,6 +13,10 @@ export function ContactSection() {
   const [submitSuccess, setSubmitSuccess] = useState(false)
   const [submitError, setSubmitError] = useState("")
 
+  const EMAILJS_SERVICE_ID = process.env.REACT_APP_EMAILJS_SERVICE_ID
+  const EMAILJS_TEMPLATE_ID = process.env.REACT_APP_EMAILJS_TEMPLATE_ID
+  const EMAILJS_PUBLIC_KEY = process.env.REACT_APP_EMAILJS_PUBLIC_KEY
+
   const handleChange = (e) => {
     const { name, value } = e.target
     setFormData(prev => ({
@@ -20,22 +25,37 @@ export function ContactSection() {
     }))
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
     setIsSubmitting(true)
     setSubmitError("")
-    
 
-    setTimeout(() => {
-      setIsSubmitting(false)
+    try {
+      if (!EMAILJS_SERVICE_ID || !EMAILJS_TEMPLATE_ID || !EMAILJS_PUBLIC_KEY) {
+        throw new Error("Email service not configured. Please set REACT_APP_EMAILJS_* env vars.")
+      }
+
+      await emailjs.send(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        {
+          from_name: formData.name,
+          reply_to: formData.email,
+          message: formData.message,
+          to_email: "yayafaresPRO@gmail.com"
+        },
+        { publicKey: EMAILJS_PUBLIC_KEY }
+      )
+
       setSubmitSuccess(true)
       setFormData({ name: "", email: "", message: "" })
-      
-
-      setTimeout(() => {
-        setSubmitSuccess(false)
-      }, 5000)
-    }, 1500)
+      setTimeout(() => setSubmitSuccess(false), 5000)
+    } catch (err) {
+      const errorMessage = (err && err.message) ? err.message : "Failed to send message. Please try again later."
+      setSubmitError(errorMessage)
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
