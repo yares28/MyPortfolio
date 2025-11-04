@@ -27,7 +27,7 @@ export function HeroSection() {
             <a
               href="/pdf/Yahya_Fares_CV.pdf"
               download="Yahya_Fares_CV.pdf"
-              className="px-6 py-3 bg-secondary text-white font-medium rounded-md hover:bg-secondary/80 transition-colors"
+              className="px-6 py-3 bg-secondary text-black dark:text-white font-medium rounded-md hover:bg-secondary/80 transition-colors"
             >
               Download CV
             </a>
