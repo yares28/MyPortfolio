@@ -14,13 +14,13 @@ const projectsData = [
     github: "https://github.com/yares28/Pathfinder-Visualizer"
   },
   {
-    title: "ScrapedIn",
-    description: "A web platform designed to help users track and manage their job applications on LinkedIn. It lets you register each application, organize them into your own categories, and monitor the progress of each submission. While it might not be the most advanced scraper out there, it offers a straightforward and accessible solution that gets the job done without overcomplicating the process.",
-    technologies: ["JavaScript", "Python", "HTML", "CSS"],
+    title: "UPV Calendar",
+    description: "Its a UPV (Universitat Politècnica de València) Exam Calendar application. It allows users to view, filter, and save exam schedules. It has now more than 500 users. It includes a frontend built with Next.js, React and Typescript with a backend using Spring Boot with Supabase (PostgreSQL).",
+    technologies: ["TypeScript", "React", "TailwindCSS", "PostgreSQL", "Supabase", "Next.js"],
     image: "/images/project2img.png", 
     video: "/videos/project2.mp4", 
-    link: "https://spraped-in.vercel.app/",
-    github: "https://github.com/yares28/Linkedin-Tracker"
+    link: "https://www.upvcal.com/",
+    github: "https://github.com/yares28/Proves"
   },
   {
     title: "To be announced...",
